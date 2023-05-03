@@ -13,7 +13,7 @@ public class AppConfig {
     @Bean(name = "speakerService")
     public SpeakerService getSpeakerService() {
         SpeakerServiceImpl service = new SpeakerServiceImpl();
-        service.setRepository(getSpeakerRepository());
+        //service.setRepository(getSpeakerRepository());
         return service;
     }
 
