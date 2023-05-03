@@ -20,6 +20,7 @@ public class SpeakerServiceImpl implements SpeakerService {
         System.out.println("SpeakService no args constructor");
     }
 
+    @Autowired
     public SpeakerServiceImpl(SpeakerRepository repository) {
         System.out.println("SpeakService repository constructor");
         this.repository = repository;
@@ -31,7 +32,6 @@ public class SpeakerServiceImpl implements SpeakerService {
         return repository.findAll();
     }
 
-    @Autowired
     public void setRepository(SpeakerRepository repository) {
         System.out.println("SpeakService setter");
         this.repository = repository;
