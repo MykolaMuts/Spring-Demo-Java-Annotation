@@ -1,15 +1,11 @@
 package com.pluralsight.service;
 
 import com.pluralsight.model.Speaker;
-import com.pluralsight.repository.HibernateSpeakerRepositoryImpl;
 import com.pluralsight.repository.SpeakerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
-import java.util.ArrayList;
 import java.util.List;
 
 @Service("speakerService")
@@ -28,12 +24,12 @@ public class SpeakerServiceImpl implements SpeakerService {
     }
 
     @PostConstruct
-    private  void initialize(){
+    private void initialize() {
         System.out.println("We're called after the constructors");
     }
+
     @Override
     public List<Speaker> findAll() {
-
         return repository.findAll();
     }
 
