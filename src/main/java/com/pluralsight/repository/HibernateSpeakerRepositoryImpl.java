@@ -12,7 +12,7 @@ import java.util.Calendar;
 import java.util.List;
 
 @Repository("speakerRepository")
-@Profile("dev")
+//@Profile("dev")
 public class HibernateSpeakerRepositoryImpl implements SpeakerRepository {
 
     @Autowired

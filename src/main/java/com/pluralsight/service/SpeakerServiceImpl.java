@@ -10,7 +10,7 @@ import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Service("speakerService")
-@Profile("dev")
+//@Profile("dev")
 public class SpeakerServiceImpl implements SpeakerService {
 
     private SpeakerRepository repository;
