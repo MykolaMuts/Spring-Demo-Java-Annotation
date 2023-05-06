@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,6 +27,10 @@ public class SpeakerServiceImpl implements SpeakerService {
         this.repository = repository;
     }
 
+    @PostConstruct
+    private  void initialize(){
+        System.out.println("We're called after the constructors");
+    }
     @Override
     public List<Speaker> findAll() {
 
